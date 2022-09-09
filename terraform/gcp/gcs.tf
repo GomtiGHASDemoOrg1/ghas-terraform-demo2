@@ -7,7 +7,7 @@ resource "google_storage_bucket" "terragoat_website" {
 # Moving this around to test dismissing Code Scanning alert https://github.com/octodemo/felickz-advanced-security-terraform/security/code-scanning/432
 # Moving this around to test dismissing Code Scanning alert https://github.com/octodemo/felickz-advanced-security-terraform/security/code-scanning/432
 resource "google_storage_bucket_iam_binding" "allow_public_read" {
-  bucket  = google_storage_bucket.terragoat_website.id
-  members =  ["allUsers2"]
+  bucket  = google_storage_bucket.terragoat_website.id2
+  members =  ["allUsers"]
   role    = "roles/storage.objectViewer"
 }
